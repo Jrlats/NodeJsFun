@@ -86,7 +86,7 @@ passport.use('local-register', registerStrategy);
 passport.use('local-login', loginStrategy);
 
 app.get('/healthcheck', function (req, res) {
-    return res.send('up and running!');
+    return res.send('This is the class app dover health check!');
 });
 
 app.post('/register', passport.authenticate('local-register'), function (req, res) {
