@@ -127,16 +127,16 @@ app.post('/postrecipe', function (req, res) {
 
 app.get('/getrecipes', function (req, res) {
 
-    authentication.authorization(req,res);
-
-    var token = req.headers.authorization.split(' ')[1];
-    var payload = jwt.decode(token, "shh..");
-
-    if (!payload.sub) {
-        res.status(401).send({
-            message: 'Authentication failed'
-        });
-    }
+    //authentication.authorization(req,res);
+    //
+    //var token = req.headers.authorization.split(' ')[1];
+    //var payload = jwt.decode(token, "shh..");
+    //
+    //if (!payload.sub) {
+    //    res.status(401).send({
+    //        message: 'Authentication failed'
+    //    });
+    //}
 
     Recipe.find({}, function(err, resRecipes){
         if (err) throw err;
