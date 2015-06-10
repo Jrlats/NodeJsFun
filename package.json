@@ -2,7 +2,7 @@
   "name": "NodeJsFun",
   "version": "0.0.0",
   "description": "A sample Node.js app using Express 4",
-  "main": api.js
+  "main": "api.js"
   "scripts": {
     "start": "node api.js"
   },
